@@ -1,74 +1,117 @@
-nav{
-  width: 100;
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #483D8B;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation */
+nav {
+  width: 100%; /* Ensure full width */
   display: flex;
   align-items: center;
   gap: 30px;
-  height:50px;
+  height: 50px;
   justify-content: center;
 }
 
-a{
-  position:relative;
+nav a {
+  position: relative;
   cursor: pointer;
   color: #efefee;
   font-size: 25px;
   padding: 0.5rem 1rem;
-  transition: color 0.25s;
+  text-decoration: none; /* Remove underline */
+  background-color: blueviolet;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: all 0.3s ease; /* Unified transition */
 }
 
-a::after{
+nav a::after {
   position: absolute;
   content: "";
   inset: 0;
   background: black;
   scale: 1 0;
   z-index: -1;
-  transition: 0.45s;
+  transition: transform 0.45s ease; /* More specific property */
   border-radius: 10px;
 }
 
-a:hover{
+nav a:hover {
   color: black;
+  background-color: darkviolet;
 }
 
-a:hover::after{
-  scale:1 1;
+nav a:hover::after {
+  transform: scale(1, 1); /* Use transform instead of scale shorthand */
 }
 
-body{
-  background-color: #483D8B;
-}
-
-p{
+/* Body Text */
+p {
   font-size: 25px;
   color: white;
+  margin: 1rem;
 }
 
-.column {
-  float: left;
-  width: 25%;
-  padding: 5px;
-}
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
+/* Columns and Rows */
 .row {
   display: flex;
+  gap: 10px;
 }
 
 .column {
-  flex: 25%;
+  flex: 1; /* Equal-width columns */
   padding: 5px;
+  text-align: center; /* Optional, for better visuals */
 }
 
+/* Header Section - Slimmer Design with Larger Logo */
 .header {
-  padding: 1px;
+  padding: 10px 20px; /* Moderate padding for space */
   text-align: left;
   background-image: url(header.jpeg);
-  color: black;
-  font-size: 30px;
+  background-position: center;
+  background-color: #333; /* Fallback color */
+  color: white;
+  font-size: 20px; /* Slimmer font size */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease; /* Smooth transition for shrinking effect */
 }
+
+.header img {
+  height: 60px; /* Increase logo height */
+  max-width: 100px; /* Adjust width to maintain aspect ratio */
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+
+
+/* Shrink effect */
+.shrunken .header {
+  padding: 5px 15px; /* Keep padding minimal in shrink mode */
+  background-color: #222;
+}
+
+.shrunken .header img {
+  height: 50px; /* Keep the logo larger even in shrink mode */
+  max-width: 80px; /* Maintain a reasonable size */
+}
+
+.shrunken nav a {
+  padding: 5px 10px; /* Slimmer navigation links */
+}
+
+/* Main Content Adjustments */
+body {
+  margin-top: 90px; /* Add space for the fixed header */
+}
+
+
