@@ -17,6 +17,13 @@ body {
   text-align: center;  
 }
 
+header, footer {
+  text-align: center;  
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
 nav {
   width: 100%;
   display: flex;
@@ -40,24 +47,9 @@ nav a {
   transition: all 0.3s ease;
 }
 
-nav a::after {
-  position: absolute;
-  content: "";
-  inset: 0;
-  background: black;
-  transform: scale(1, 0);
-  z-index: -1;
-  transition: transform 0.45s ease;
-  border-radius: 10px;
-}
-
 nav a:hover {
   color: black;
   background-color: darkviolet;
-}
-
-nav a:hover::after {
-  transform: scale(1, 1);
 }
 
 p {
@@ -72,13 +64,6 @@ p {
   justify-content: center;  
   gap: 10px;
   flex-wrap: wrap;
-}
-
-.column {
-  flex: 1;
-  min-width: 150px;
-  padding: 5px;
-  text-align: center;
 }
 
 .header {
@@ -118,25 +103,23 @@ p {
   padding: 5px 10px;
 }
 
-header, footer {
-  text-align: center;  
-  background-color: #333;
-  color: white;
-  padding: 1rem;
+.column {
+  flex: 1;
+  min-width: 150px;
+  padding: 5px;
+  text-align: center;
 }
 
-main {
-  padding: 1rem;
+.column img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
 }
 
-.container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 10px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  text-align: center; 
+.header img, .sofia-image {
+  display: block;   
+  margin: 0 auto; 
 }
 
 @media screen and (max-width: 599px) {
@@ -153,8 +136,8 @@ main {
   }
 
   nav {
-    justify-content: space-between;
     flex-direction: column;
+    justify-content: space-between;
   }
 
   nav a {
@@ -203,14 +186,4 @@ main {
   header {
     font-size: 24px;
   }
-}
-
-.column img {
-  border: 2px solid #ccc;
-  border-radius: 5px;
-}
-
-.header img, .sofia-image {
-  display: block;   
-  margin: 0 auto; 
 }
