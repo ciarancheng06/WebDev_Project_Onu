@@ -205,50 +205,6 @@ main {
   }
 }
 
-p {
-  text-align: center;
-  margin: 0 auto;
-}
-
-.main-content {
-  max-width: 1000px;
-  margin: auto;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  padding: 10px 15px;
-  background-color: blueviolet;
-  border-radius: 5px;
-  margin: 5px;
-  display: inline-block;
-}
-
-nav a:hover {
-  background-color: darkviolet;
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.header img {
-  vertical-align: middle;
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.column {
-  text-align: center;
-}
-
 .column img {
   border: 2px solid #ccc;
   border-radius: 5px;
