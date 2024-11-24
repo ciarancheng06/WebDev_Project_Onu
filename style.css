@@ -5,26 +5,26 @@ body {
   background-color: #483D8B;
   font-family: Arial, sans-serif;
   display: flex;
-  justify-content: center;  /* Center horizontally */
-  align-items: center;  /* Center vertically */
-  flex-direction: column;  /* Stack content vertically */
-  min-height: 100vh;  /* Full viewport height */
+  justify-content: center;  
+  align-items: center;  
+  flex-direction: column;  
+  min-height: 100vh;  
 }
 
 .main-content {
   max-width: 1000px;
   margin: auto;
-  text-align: center;  /* Center text within the main content */
+  text-align: center;  
 }
 
 nav {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;  /* Center nav items */
-  gap: 20px;  /* Adjusted gap */
+  justify-content: center;  
+  gap: 20px;  
   height: 50px;
-  flex-wrap: wrap;  /* Allow nav items to wrap on smaller screens */
+  flex-wrap: wrap;  
 }
 
 nav a {
@@ -63,13 +63,13 @@ nav a:hover::after {
 p {
   font-size: 25px;
   color: white;
-  text-align: center;  /* Center text */
+  text-align: center;  
   margin: 0 auto;
 }
 
 .row {
   display: flex;
-  justify-content: center;  /* Center row items */
+  justify-content: center;  
   gap: 10px;
   flex-wrap: wrap;
 }
@@ -83,7 +83,7 @@ p {
 
 .header {
   padding: 10px 20px;
-  text-align: center;  /* Center header content */
+  text-align: center; 
   background-image: url(header.jpeg);
   background-position: center;
   background-color: #444;
@@ -119,7 +119,7 @@ p {
 }
 
 header, footer {
-  text-align: center;  /* Center text */
+  text-align: center;  
   background-color: #333;
   color: white;
   padding: 1rem;
@@ -136,7 +136,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
-  text-align: center;  /* Center text within container */
+  text-align: center; 
 }
 
 @media screen and (max-width: 599px) {
@@ -256,6 +256,5 @@ nav a:hover {
 
 .header img, .sofia-image {
   display: block;   
-  margin: 0 auto;  /* Ensure images are centered */
+  margin: 0 auto; 
 }
-
