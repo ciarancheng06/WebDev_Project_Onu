@@ -1,33 +1,43 @@
-/* General Reset */
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #483D8B;
   font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;  /* Center vertically */
+  flex-direction: column;  /* Stack content vertically */
+  min-height: 100vh;  /* Full viewport height */
 }
 
-/* Navigation */
+.main-content {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;  /* Center text within the main content */
+}
+
 nav {
-  width: 100%; /* Ensure full width */
+  width: 100%;
   display: flex;
   align-items: center;
-  gap: 30px;
+  justify-content: center;  /* Center nav items */
+  gap: 20px;  /* Adjusted gap */
   height: 50px;
-  justify-content: center;
+  flex-wrap: wrap;  /* Allow nav items to wrap on smaller screens */
 }
 
 nav a {
   position: relative;
   cursor: pointer;
   color: #efefee;
-  font-size: 25px;
+  font-size: 18px;
   padding: 0.5rem 1rem;
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
   background-color: blueviolet;
   border-radius: 5px;
   margin: 0 10px;
-  transition: all 0.3s ease; /* Unified transition */
+  transition: all 0.3s ease;
 }
 
 nav a::after {
@@ -35,9 +45,9 @@ nav a::after {
   content: "";
   inset: 0;
   background: black;
-  scale: 1 0;
+  transform: scale(1, 0);
   z-index: -1;
-  transition: transform 0.45s ease; /* More specific property */
+  transition: transform 0.45s ease;
   border-radius: 10px;
 }
 
@@ -47,71 +57,205 @@ nav a:hover {
 }
 
 nav a:hover::after {
-  transform: scale(1, 1); /* Use transform instead of scale shorthand */
+  transform: scale(1, 1);
 }
 
-/* Body Text */
 p {
   font-size: 25px;
   color: white;
-  margin: 1rem;
+  text-align: center;  /* Center text */
+  margin: 0 auto;
 }
 
-/* Columns and Rows */
 .row {
   display: flex;
+  justify-content: center;  /* Center row items */
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .column {
-  flex: 1; /* Equal-width columns */
+  flex: 1;
+  min-width: 150px;
   padding: 5px;
-  text-align: center; /* Optional, for better visuals */
+  text-align: center;
 }
 
-/* Header Section - Slimmer Design with Larger Logo */
 .header {
-  padding: 10px 20px; /* Moderate padding for space */
-  text-align: left;
+  padding: 10px 20px;
+  text-align: center;  /* Center header content */
   background-image: url(header.jpeg);
   background-position: center;
-  background-color: #333; /* Fallback color */
+  background-color: #444;
   color: white;
-  font-size: 20px; /* Slimmer font size */
+  font-size: 20px;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1000;
-  transition: all 0.3s ease; /* Smooth transition for shrinking effect */
+  z-index: 100;
+  transition: all 0.3s ease;
 }
 
 .header img {
-  height: 60px; /* Increase logo height */
-  max-width: 100px; /* Adjust width to maintain aspect ratio */
+  height: 60px;
+  max-width: 100px;
   vertical-align: middle;
   transition: all 0.3s ease;
 }
 
-
-/* Shrink effect */
 .shrunken .header {
-  padding: 5px 15px; /* Keep padding minimal in shrink mode */
+  padding: 5px 15px;
   background-color: #222;
 }
 
 .shrunken .header img {
-  height: 50px; /* Keep the logo larger even in shrink mode */
-  max-width: 80px; /* Maintain a reasonable size */
+  height: 50px;
+  max-width: 80px;
 }
 
 .shrunken nav a {
-  padding: 5px 10px; /* Slimmer navigation links */
+  padding: 5px 10px;
 }
 
-/* Main Content Adjustments */
-body {
-  margin-top: 90px; /* Add space for the fixed header */
+header, footer {
+  text-align: center;  /* Center text */
+  background-color: #333;
+  color: white;
+  padding: 1rem;
 }
 
+main {
+  padding: 1rem;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  text-align: center;  /* Center text within container */
+}
+
+@media screen and (max-width: 599px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 5px;
+  }
+
+  header {
+    font-size: 18px;
+  }
+
+  nav {
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+  }
+
+  .header img {
+    height: 50px;
+    max-width: 80px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  header {
+    font-size: 22px;
+  }
+
+  nav {
+    justify-content: space-around;
+  }
+
+  nav a {
+    font-size: 18px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  header {
+    font-size: 24px;
+  }
+}
+
+p {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.main-content {
+  max-width: 1000px;
+  margin: auto;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  background-color: blueviolet;
+  border-radius: 5px;
+  margin: 5px;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: darkviolet;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header img {
+  vertical-align: middle;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.column {
+  text-align: center;
+}
+
+.column img {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.header img, .sofia-image {
+  display: block;   
+  margin: 0 auto;  /* Ensure images are centered */
+}
 

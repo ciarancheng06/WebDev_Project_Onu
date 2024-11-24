@@ -5,101 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Anime Haven</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .main-content {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-            text-align: center;
-        }
-        h2, p {
-            text-align: center;
-        }
-        nav a {
-            text-decoration: none;
-            color: white;
-            padding: 10px 15px;
-            background-color: blueviolet;
-            border-radius: 5px;
-            margin: 5px;
-            display: inline-block;
-        }
-        nav a:hover {
-            background-color: darkviolet;
-        }
-        .header img {
-            display: block;
-            margin: 0 auto;
-        }
-        form {
-            text-align: center;
-            margin: 20px auto;
-        }
-        form input[type="text"] {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        form input[type="submit"], form input[type="reset"] {
-            padding: 10px 15px;
-            margin: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: blueviolet;
-            color: white;
-            cursor: pointer;
-        }
-        form input[type="submit"]:hover, form input[type="reset"]:hover {
-            background-color: darkviolet;
-        }
     </style>
 </head>
 <body>
+    
 <div class="main-content">
     <div class="header">
-        <img src="Anime Haven.png" alt="Logo" width="80" height="80">
+        <img src="Anime Haven.png" alt="Anime Haven Logo" width="80" height="80">
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="help.html">Help</a>
+            <a href="product.html">Product</a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSehummdEuIaSuMvCWGhBubv-D7LeA9p9tfZbZ0CcWJp4Rl8ow/viewform?pli=1">Reservation</a>
         </nav>
     </div>
-
-    <br><br><br><br><br><br><br>
 
     <p>At Anime Haven, we want everyone to be satisfied with each product they receive and the user experience of our website.</p>
     <p>As a team, we are committed to providing the best overall experience for the customer.</p>
     <p>If you have any queries, you can email, text, or call us at any time.</p>
 
-    <br><br>
-
     <h2>Contact Us At:</h2>
     <p>Email: <a href="mailto:animehaven@gmail.com">animehaven@gmail.com</a></p>
     <p>Phone: +353 089 489 4928</p>
 
-    <br>
+    <p>If you have suggestions on how we can improve our website, please let us know in the response section below.</p>
+    <p>Please leave a review; we would really appreciate it!</p>
 
-    <p>If you have suggestions on how we can improve our website, please let us know in the response section.</p>
-    <p>Please leave a review. We will really appreciate it.</p>
-
-    <form action="submit_form.php" method="post">
+    <form id="feedback-form">
         <label for="response">Response:</label><br>
         <input type="text" id="response" name="response" placeholder="Enter your feedback"><br>
+
         <label for="reviews">Reviews:</label><br>
         <input type="text" id="reviews" name="reviews" placeholder="Leave a review"><br>
+
         <input type="submit" value="Submit">
         <input type="reset" value="Reset">
     </form>
-
-    <br><br>
 </div>
 </body>
 </html>
