@@ -111,8 +111,9 @@ p {
 }
 
 .column img {
-  max-width: 100%;
-  height: auto;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
   border: 2px solid #ccc;
   border-radius: 5px;
 }
