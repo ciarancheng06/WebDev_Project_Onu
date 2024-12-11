@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Anime Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    </style>
+</head>
+<body>
+<div class="main-content">
+    <div class="header">
+        <img src="Anime Haven.png" alt="Logo" width="80" height="80">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="help.html">Help</a>
+        </nav>
+        <nav>
+            <a href="product.html">Product</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSehummdEuIaSuMvCWGhBubv-D7LeA9p9tfZbZ0CcWJp4Rl8ow/viewform?pli=1">Reservation</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm" novalidate>
+            <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                <span class="error-message" id="nameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                <span class="error-message" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="contactMethod">Preferred Contact Method</label>
+                <select id="contactMethod" name="contactMethod">
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
+                    <option value="none">None</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message here" required></textarea>
+                <span class="error-message" id="messageError"></span>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</div>
+</body>
+</html>
